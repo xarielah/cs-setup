@@ -1,25 +1,25 @@
 <div class="max-w-[1550px] mx-auto">
-    <header class="p-4 w-full sticky top-0 flex items-center justify-between">
-        <nav class="flex items-center gap-6">
-            <a routerLink="/" class="flex gap-2 item-center">
-                <app-logo />
+  <header class="p-4 w-full sticky top-0 flex items-center justify-between">
+    <nav class="flex items-center gap-6">
+      <a routerLink="/" class="flex gap-2 item-center">
+        <app-logo />
+      </a>
+
+      <ul class="space-x-6 flex items-center text-sm">
+        @for (item of menu; track item) {
+          <li>
+            <a [routerLink]="item.routerLink" class="hover:underline flex items-center gap-2">
+              {{ item.label }}
             </a>
+          </li>
+        }
+      </ul>
+    </nav>
 
-            <ul class="space-x-6 flex items-center text-sm">
-                <ng-container *ngFor="let item of menu">
-                    <li>
-                        <a [routerLink]="item.routerLink" class="hover:underline flex items-center gap-2">
-                            {{ item.label }}
-                        </a>
-                    </li>
-                </ng-container>
-            </ul>
-        </nav>
+    <button aria-label="GitHub" nz-button nzType="primary">
+      <i class="pi pi-github"></i>
+    </button>
+  </header>
 
-        <button aria-label="GitHub" nz-button nzType="primary">
-            <i class="pi pi-github"></i>
-        </button>
-    </header>
-
-    <router-outlet />
+  <router-outlet />
 </div>
