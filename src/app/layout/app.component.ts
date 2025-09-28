@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { ButtonModule } from 'primeng/button';
 import { LogoComponent } from '../shared/ui/logo.component';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NgForOf } from '@angular/common';
 
 type NavigationItem = {
@@ -11,7 +11,7 @@ type NavigationItem = {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, LogoComponent, NgForOf, RouterLink, ButtonModule],
+  imports: [RouterOutlet, LogoComponent, NgForOf, RouterLink, NzButtonModule],
   templateUrl: './app.component.html',
 })
 export class AppComponent {
