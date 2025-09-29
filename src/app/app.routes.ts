@@ -6,6 +6,7 @@ import { CrosshairDesignerComponent } from './core/pages/crosshair-designer/cros
 import { KeybindingsComponent } from './core/pages/keybindings/keybindings.component';
 import { LaunchOptionsComponent } from './core/pages/launch-options/launch-options.component';
 import { PerformanceBoostComponent } from './core/pages/performance-boost/performance-boost.component';
+import { MenuHrefs } from './shared/types/menu-items';
 
 export const routes: Routes = [
   {
@@ -13,27 +14,27 @@ export const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'guided-setup',
+    path: MenuHrefs.GuidedSetup,
     component: GuidedSetupComponent,
   },
   {
-    path: 'video-settings',
+    path: MenuHrefs.VideoSettings,
     component: VideoSettingsComponent,
   },
   {
-    path: 'crosshair-designer',
+    path: MenuHrefs.CrosshairDesigner,
     component: CrosshairDesignerComponent,
   },
   {
-    path: 'keybindings',
+    path: MenuHrefs.Keybindings,
     component: KeybindingsComponent,
   },
   {
-    path: 'launch-options',
+    path: MenuHrefs.LaunchOptions,
     component: LaunchOptionsComponent,
   },
   {
-    path: 'performance-boost',
+    path: MenuHrefs.Performance,
     component: PerformanceBoostComponent,
   },
 ];
