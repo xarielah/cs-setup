@@ -1,11 +1,11 @@
 export enum MenuHrefs {
   Home = '/',
-  GuidedSetup = '/guided-setup',
-  VideoSettings = '/video',
-  CrosshairDesigner = '/crosshair',
-  Keybindings = '/keybinds',
-  LaunchOptions = '/launch-options',
-  Performance = '/performance',
+  GuidedSetup = 'guided-setup',
+  VideoSettings = 'video-settings',
+  CrosshairDesigner = 'crosshair-designer',
+  Keybindings = 'keybindings',
+  LaunchOptions = 'launch-options',
+  Performance = 'performance-boost',
 }
 
 export type MenuItem = {
