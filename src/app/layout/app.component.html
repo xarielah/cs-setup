@@ -1,25 +1,29 @@
-<div class="max-w-[1550px] mx-auto">
-  <header class="p-4 w-full sticky top-0 flex items-center justify-between">
-    <nav class="flex items-center gap-6">
-      <a routerLink="/" class="flex gap-2 item-center">
-        <app-logo />
-      </a>
-
-      <ul class="space-x-6 flex items-center text-sm">
-        @for (item of menu; track item) {
-          <li>
-            <a [routerLink]="item.routerLink" class="hover:underline flex items-center gap-2">
-              {{ item.label }}
-            </a>
-          </li>
+<div class="min-h-screen h-full flex flex-col">
+  <header
+    class="sticky top-0 z-50 w-full border-b border-zinc-300 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav class="max-w-7xl flex gap-12 items-center mx-auto h-full">
+      <app-logo />
+      <div class="space-x-12">
+        @for (item of menu; track $index) {
+        <a [routerLink]="item.href">{{
+          item.label }}</a>
         }
-      </ul>
+      </div>
     </nav>
-
-    <button aria-label="GitHub" nz-button nzType="primary">
-      <i class="pi pi-github"></i>
-    </button>
   </header>
 
-  <router-outlet />
+  <main class="max-w-7xl mx-auto flex-1 w-full p-4 md:p-8">
+    <router-outlet />
+  </main>
+
+  <footer class="w-full p-4">
+    <section class="max-w-7xl mx-auto">
+      <span class="text-left self-center">CS Setup Helper &copy;
+        {{activeFrom}}-{{currentYear}}.<br />Built for the CS2
+        community. Not
+        affiliated with
+        Valve
+        Corporation.</span>
+    </section>
+  </footer>
 </div>

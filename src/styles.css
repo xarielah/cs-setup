@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import "tailwindcss";
-@import '~ng-zorro-antd/ng-zorro-antd.min.css';
-@import '~ng-zorro-antd/ng-zorro-antd.less';
-@import '~ng-zorro-antd/style/index.min.css';
+
+@primary-color: #f5222d;
 
 html,
 body {

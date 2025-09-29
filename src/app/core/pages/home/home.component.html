@@ -1,0 +1,53 @@
+<section class="overflow-hidden py-24 lg:py-32 max-w-7xl mx-auto">
+    <div class="container px-4 md:px-6 mx-auto">
+        <div class="flex flex-col items-center space-y-4 text-center">
+            <div class="space-y-2">
+                <h1 class="text-3xl font-bold tracking-tighter text-balance sm:text-4xl md:text-5xl lg:text-6xl/none">
+                    Optimize Your <span class="text-yellow-500">Counter-Strike 2</span> Performance
+                </h1>
+                <p class="mx-auto max-w-[700px] text-muted-foreground md:text-xl text-balance">
+                    Professional configuration helper for CS2. Get the perfect settings for your hardware, playstyle,
+                    and
+                    competitive edge with our guided setup process.
+                </p>
+            </div>
+            <div class="flex gap-4 justify-center">
+                <button nz-button nzType="primary" nzSize="large">
+                    <a href="/setup">
+                        Start Setup Guide
+                    </a>
+                </button>
+                <button nz-button nzSize="large">
+                    <a href="/articles">Learn More</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-24 lg:py-32">
+    <div class="container px-4 md:px-6 mx-auto">
+        <div class="flex flex-col items-center justify-center space-y-4 text-center">
+            <div class="space-y-2">
+                <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl text-balance">
+                    Everything You Need to Dominate
+                </h2>
+                <p
+                    class="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-balance">
+                    From video settings to crosshair customization, our tool covers every aspect of CS2 configuration to
+                    give you the competitive advantage.
+                </p>
+            </div>
+        </div>
+        <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 w-full py-12">
+            @for(feature of featureCards; track $index) {
+            <div [routerLink]="feature.href" class="cursor-pointer">
+                <nz-card class="hover:shadow-lg transition-shadow">
+                    <nz-icon [nzType]="feature.icon" nzTheme="outline" class="text-3xl pb-3" />
+                    <nz-card-meta [nzTitle]="feature.title" [nzDescription]="feature.description"></nz-card-meta>
+                </nz-card>
+            </div>
+            }
+        </section>
+    </div>
+</section>
