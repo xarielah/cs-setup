@@ -1,7 +1,11 @@
 export enum MenuHrefs {
   Home = '/',
   GuidedSetup = '/guided-setup',
-  Articles = '/articles',
+  VideoSettings = '/video',
+  CrosshairDesigner = '/crosshair',
+  Keybindings = '/keybinds',
+  LaunchOptions = '/launch-options',
+  Performance = '/performance',
 }
 
 export type MenuItem = {
@@ -12,5 +16,9 @@ export type MenuItem = {
 export const menuItems: MenuItem[] = [
   { label: 'Home', href: MenuHrefs.Home },
   { label: 'Guided Setup', href: MenuHrefs.GuidedSetup },
-  { label: 'Articles', href: MenuHrefs.Articles },
+  { label: 'Video Settings', href: MenuHrefs.VideoSettings },
+  { label: 'Crosshair Designer', href: MenuHrefs.CrosshairDesigner },
+  { label: 'Keybindings', href: MenuHrefs.Keybindings },
+  { label: 'Launch Options', href: MenuHrefs.LaunchOptions },
+  { label: 'Performance Boost', href: MenuHrefs.Performance },
 ];
